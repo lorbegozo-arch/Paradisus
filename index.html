@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fisify × Paradisus Gran Canaria · Plan de Acción · 1 año</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F7F1E6;
+  --vanilla: #FBF7EE;
+  --paper: #FFFFFF;
+  --sand: #F0E6D5;
+  --sand-deep: #E7D8C0;
+  --beige: #E2D2B8;
+  --taupe: #CBB79B;
+  --clay: #B07E5B;
+  --clay-soft: #C79E7C;
+  --rose: #C99A8E;
+  --sage: #97A089;
+  --sage-deep: #6E7A57;
+  --cocoa: #5C4B3A;
+  --cocoa-deep: #4A3B2D;
+  --ink: #4C4136;
+  --ink-soft: #87796A;
+  --line: #E7DBC8;
+  --line-soft: #EFE6D6;
+  --crit: #B26B54;
+  --high: #C39A66;
+  --med: #D8C6A8;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', system-ui, sans-serif;
+  --container: 1180px;
+  --pad-x: clamp(1.2rem, 4vw, 3rem);
+  --radius: 16px;
+  --radius-lg: 26px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--cream); color: var(--ink); font-size: 16px; line-height: 1.7; font-weight: 300; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; letter-spacing: 0.005em; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--pad-x); }
+a { color: inherit; }
+
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(251,247,238,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); padding: 0.85rem 0; color: var(--cocoa); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.nav-brand { font-family: var(--font-display); font-size: 1.7rem; font-weight: 400; letter-spacing: 0.01em; color: var(--cocoa); display: flex; align-items: center; gap: 0.7rem; }
+.nav-brand strong { color: var(--cocoa); font-weight: 500; }
+.nav-brand .x { color: var(--taupe); margin: 0 0.1em; font-weight: 400; }
+.nav-logo { height: 42px; width: 42px; border-radius: 9px; background: #fff url('logo-melia.png') center / 76% no-repeat; border: 1px solid var(--line); display: inline-block; flex-shrink: 0; }
+.nav-meta { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); }
+.nav-mark { width: 30px; height: 30px; flex-shrink: 0; }
+/* PARADISUS lockup */
+.paradisus-logo { display: inline-flex; flex-direction: column; align-items: center; gap: 0.55rem; margin-bottom: 2.2rem; padding: 1.1rem 1.6rem; background: rgba(255,255,255,0.55); border: 1px solid rgba(110,122,87,0.22); border-radius: 14px; backdrop-filter: blur(3px); }
+.paradisus-logo .pl-mark { width: 50px; height: auto; }
+.paradisus-logo .pl-word { font-family: var(--font-sans); font-weight: 300; font-size: 1.5rem; letter-spacing: 0.46em; text-indent: 0.46em; color: var(--sage-deep); line-height: 1; }
+.paradisus-logo .pl-sub { font-family: var(--font-sans); font-weight: 400; font-size: 0.66rem; letter-spacing: 0.4em; text-indent: 0.4em; color: var(--sage-deep); }
+
+section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
+.section-num { font-family: var(--font-sans); font-size: 0.74rem; font-weight: 500; color: var(--clay); letter-spacing: 0.26em; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }
+.section-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 400; line-height: 1.02; letter-spacing: 0.005em; color: var(--cocoa); margin-bottom: 1.4rem; max-width: 24ch; }
+.section-title .y { color: var(--clay); font-style: italic; font-weight: 500; }
+.section-lead { font-size: clamp(1.05rem, 1.4vw, 1.2rem); color: var(--ink-soft); max-width: 62ch; line-height: 1.7; font-weight: 300; }
+
+/* HERO */
+.hero { position: relative; background: var(--sand); color: var(--ink); padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(3.5rem, 8vw, 6rem); overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: var(--sand-deep) url('hero.jpg') center 28% / cover no-repeat; pointer-events: none; z-index: 0; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(102deg, rgba(247,241,230,0.96) 0%, rgba(247,241,230,0.88) 34%, rgba(247,241,230,0.55) 64%, rgba(247,241,230,0.18) 100%); pointer-events: none; z-index: 1; }
+.hero-inner { position: relative; z-index: 2; }
+.hero-eyebrow { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--clay); margin-bottom: 1.8rem; display: flex; align-items: center; gap: 0.6rem; }
+.hero-eyebrow img { height: 30px; width: 30px; object-fit: contain; background: #fff; border-radius: 7px; border: 1px solid var(--line); padding: 2px; }
+.hero-title { font-family: var(--font-display); font-size: clamp(3.6rem, 9vw, 7rem); font-weight: 400; line-height: 0.98; color: var(--cocoa); max-width: 14ch; margin-bottom: 1.2rem; letter-spacing: 0.005em; }
+.hero-title .y { color: var(--clay); font-style: italic; font-weight: 500; }
+.hero-subtitle { font-family: var(--font-sans); font-size: clamp(0.92rem, 1.3vw, 1.05rem); font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 2.6rem; }
+.hero-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.4rem 2.5rem; padding-top: 2.4rem; border-top: 1px solid rgba(176,126,91,0.28); max-width: 850px; }
+.hero-meta-item h4 { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin-bottom: 0.5rem; }
+.hero-meta-item p { font-size: 1rem; font-weight: 400; color: var(--ink); line-height: 1.5; }
+.hero-cta { display: inline-flex; margin-top: 2.6rem; padding: 1.05rem 2.4rem; background: var(--clay); color: #fff; font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 100px; text-decoration: none; transition: transform 0.2s, background 0.2s; box-shadow: 0 14px 30px -12px rgba(176,126,91,0.6); }
+.hero-cta:hover { transform: translateY(-2px); background: #9d6e4d; }
+
+/* DIAGNOSTICO */
+.diag-bg { background: var(--vanilla); }
+.diag-kpis { display: grid; gap: 1.1rem; grid-template-columns: 1fr; margin-top: 2.2rem; }
+@media (min-width: 700px) { .diag-kpis { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .diag-kpis { grid-template-columns: repeat(4, 1fr); } }
+.diag-kpi { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.9rem 1.6rem; position: relative; overflow: hidden; box-shadow: 0 14px 36px -22px rgba(92,75,58,0.25); }
+.diag-kpi::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--clay-soft); }
+.diag-kpi .label { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay); font-weight: 500; }
+.diag-kpi .pct { font-family: var(--font-display); font-size: clamp(2.8rem, 4.5vw, 3.6rem); font-weight: 400; line-height: 1; color: var(--cocoa); margin: 0.6rem 0; letter-spacing: 0.005em; }
+.diag-kpi p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.55; font-weight: 300; }
+.diag-kpi p strong { color: var(--cocoa); font-weight: 500; }
+.diag-kpi.space-card { background: var(--cocoa); border-color: var(--cocoa); }
+.diag-kpi.space-card::before { background: var(--clay-soft); }
+.diag-kpi.space-card .label { color: var(--taupe); }
+.diag-kpi.space-card .pct { color: var(--cream); font-size: 1.6rem; line-height: 1.12; max-width: 16ch; font-weight: 500; }
+.diag-kpi.space-card p { color: rgba(247,241,230,0.72); }
+.diag-kpi.space-card .pending { display: inline-block; margin-top: 0.9rem; font-family: var(--font-sans); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cocoa); background: var(--taupe); padding: 0.3rem 0.7rem; border-radius: 100px; font-weight: 500; }
+
+.roi-callout { background: linear-gradient(120deg, var(--cocoa) 0%, var(--cocoa-deep) 100%); color: var(--cream); border-radius: var(--radius); padding: 1.8rem 2rem; margin-top: 2.2rem; display: grid; gap: 1.2rem; grid-template-columns: 1fr; align-items: center; position: relative; overflow: hidden; box-shadow: 0 24px 50px -26px rgba(74,59,45,0.6); }
+@media (min-width: 760px) { .roi-callout { grid-template-columns: 2fr 1fr; } }
+.roi-callout h3 { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.9rem; font-weight: 500; }
+.roi-callout .roi-headline { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 500; line-height: 1.18; color: var(--cream); letter-spacing: 0.005em; }
+.roi-callout .roi-headline strong { color: var(--clay-soft); font-weight: 400; font-style: italic; }
+.roi-callout .roi-fit { text-align: center; font-family: var(--font-display); position: relative; z-index: 1; }
+.roi-callout .roi-fit .num { font-size: clamp(3.5rem, 7vw, 5.2rem); color: var(--clay-soft); line-height: 1; font-weight: 400; }
+.roi-callout .roi-fit .lbl { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,241,230,0.7); margin-top: 0.5rem; }
+
+/* BIO / VIDEO GRID */
+.bio-compact { margin-top: 3rem; }
+.bio-compact h3 { font-family: var(--font-display); font-size: clamp(1.9rem, 3.4vw, 2.7rem); font-weight: 400; color: var(--cocoa); line-height: 1.05; margin-bottom: 0.8rem; }
+.bio-compact .lead { font-size: 1.02rem; color: var(--ink-soft); max-width: 64ch; line-height: 1.65; margin-bottom: 1.6rem; font-weight: 300; }
+.bio-grouplabel { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin: 2.2rem 0 1.1rem; display: flex; align-items: center; gap: 0.9rem; }
+.bio-grouplabel::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.bio-grid-c { display: grid; gap: 1.4rem; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .bio-grid-c { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1080px) { .bio-grid-c { grid-template-columns: repeat(3, 1fr); } }
+.bioc { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; box-shadow: 0 14px 36px -24px rgba(92,75,58,0.3); }
+.bioc:hover { transform: translateY(-4px); box-shadow: 0 24px 44px -22px rgba(92,75,58,0.4); }
+.bioc-video { width: 100%; aspect-ratio: 16/10; background: var(--sand-deep); object-fit: cover; display: block; }
+.bioc-body { padding: 1.2rem 1.3rem 1.4rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.bioc-head { display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; }
+.bioc-id { font-family: var(--font-sans); font-size: 0.66rem; color: var(--ink-soft); letter-spacing: 0.1em; text-transform: uppercase; }
+.bioc-risk { font-family: var(--font-sans); font-size: 0.62rem; padding: 0.22rem 0.6rem; border-radius: 100px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+.bioc-risk.critical { background: var(--crit); color: #fff; }
+.bioc-risk.high { background: var(--high); color: #fff; }
+.bioc-risk.medium { background: var(--med); color: var(--cocoa); }
+.bioc h4 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--cocoa); line-height: 1.08; }
+.bioc-area { font-family: var(--font-sans); font-size: 0.68rem; color: var(--clay); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+.bioc p { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.55; font-weight: 300; }
+.bioc p strong { color: var(--cocoa); font-weight: 500; }
+
+/* DE REACTIVO A 360 */
+.cambio-bg { background: var(--sand); }
+.modelos { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-top: 2.2rem; }
+@media (min-width: 900px) { .modelos { grid-template-columns: 1fr 1fr; } }
+.modelo-card { background: var(--paper); border-radius: var(--radius); padding: 2.1rem 1.9rem; border: 1px solid var(--line); box-shadow: 0 16px 40px -26px rgba(92,75,58,0.3); }
+.modelo-card.actual { border-top: 4px solid var(--rose); }
+.modelo-card.fisify { border-top: 4px solid var(--clay); }
+.modelo-label { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.6rem; }
+.modelo-card.actual .modelo-label { color: var(--rose); }
+.modelo-card.fisify .modelo-label { color: var(--clay); }
+.modelo-card h3 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; color: var(--cocoa); margin-bottom: 1.4rem; line-height: 1.08; }
+.flow-actual { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink); line-height: 1.9; letter-spacing: 0.01em; padding: 1rem 0; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); font-weight: 300; }
+.flow-actual .arrow { color: var(--rose); margin: 0 0.4em; }
+.modelo-footer { margin-top: 1.4rem; font-size: 0.92rem; color: var(--ink-soft); font-weight: 300; }
+.modelo-footer strong { color: var(--rose); font-weight: 500; }
+.fisify-pillar { padding: 1.2rem 0; border-bottom: 1px solid var(--line-soft); display: flex; gap: 1.1rem; align-items: flex-start; }
+.fisify-pillar:last-child { border-bottom: 0; }
+.fisify-pillar .num { font-family: var(--font-display); font-size: 2.6rem; color: var(--clay-soft); line-height: 0.85; font-weight: 400; flex-shrink: 0; min-width: 42px; }
+.fisify-pillar h4 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; color: var(--cocoa); margin-bottom: 0.2rem; }
+.fisify-pillar .when { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); margin-bottom: 0.5rem; font-weight: 500; }
+.fisify-pillar p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.55; font-weight: 300; }
+.cambio-banner { background: linear-gradient(120deg, var(--cocoa), var(--cocoa-deep)); color: var(--cream); border-radius: var(--radius); padding: 1.3rem 1.6rem; margin-top: 1.6rem; text-align: center; font-family: var(--font-sans); font-size: 0.86rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300; }
+.cambio-banner strong { color: var(--clay-soft); font-weight: 400; }
+
+/* VOCES */
+.voces { margin-top: 3rem; }
+.voces-head h3 { font-family: var(--font-display); font-size: clamp(1.9rem, 3.4vw, 2.7rem); font-weight: 400; color: var(--cocoa); line-height: 1.05; margin-bottom: 0.8rem; }
+.voces-head .lead { font-size: 1.02rem; color: var(--ink-soft); max-width: 62ch; line-height: 1.65; margin-bottom: 2.2rem; font-weight: 300; }
+.voces-grid { display: grid; gap: 1.3rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .voces-grid { grid-template-columns: 1fr 1fr; } }
+.voz { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.9rem 1.8rem; position: relative; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 16px 40px -28px rgba(92,75,58,0.3); }
+.voz::before { content: '\201C'; position: absolute; top: 0.4rem; right: 1.2rem; font-family: var(--font-display); font-size: 4.5rem; color: var(--taupe); opacity: 0.5; line-height: 1; }
+.voz blockquote { font-family: var(--font-display); font-size: 1.32rem; color: var(--cocoa); line-height: 1.4; font-weight: 500; font-style: italic; }
+.voz blockquote em { color: var(--clay); font-style: italic; font-weight: 400; }
+.voz .who { display: flex; align-items: center; gap: 0.8rem; border-top: 1px solid var(--line-soft); padding-top: 1rem; }
+.voz .who .av { width: 38px; height: 38px; border-radius: 50%; background: var(--sand-deep); color: var(--clay); font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.voz .who .name { font-family: var(--font-sans); font-size: 0.84rem; color: var(--cocoa); font-weight: 500; }
+.voz .who .role { font-family: var(--font-sans); font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+.voces-insight { margin-top: 1.6rem; background: linear-gradient(120deg, var(--cocoa), var(--cocoa-deep)); color: var(--cream); border-radius: var(--radius); padding: 1.8rem 2rem; display: grid; gap: 1.4rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .voces-insight { grid-template-columns: repeat(3, 1fr); } }
+.voces-insight .vi { display: flex; flex-direction: column; gap: 0.35rem; }
+.voces-insight .vi .v { font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 1.95rem); color: var(--clay-soft); line-height: 1.05; font-weight: 400; font-style: italic; }
+.voces-insight .vi p { font-size: 0.86rem; color: rgba(247,241,230,0.8); line-height: 1.5; font-weight: 300; }
+
+/* ENGAGEMENT */
+.engage { margin-top: 2.4rem; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--clay); border-radius: var(--radius); padding: clamp(1.7rem, 3vw, 2.5rem); display: grid; gap: 1.7rem; grid-template-columns: 1fr; box-shadow: 0 16px 40px -28px rgba(92,75,58,0.3); }
+@media (min-width: 860px) { .engage { grid-template-columns: 1.1fr 1fr; align-items: center; } }
+.engage .eyebrow { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); font-weight: 500; }
+.engage h3 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 400; color: var(--cocoa); line-height: 1.08; margin: 0.5rem 0 0.9rem; }
+.engage p { font-size: 0.96rem; color: var(--ink); line-height: 1.65; font-weight: 300; }
+.engage p + p { margin-top: 0.8rem; }
+.engage strong { color: var(--cocoa); font-weight: 500; }
+.engage-vs { display: flex; flex-direction: column; gap: 0.8rem; }
+.engage-vs .row { display: flex; align-items: flex-start; gap: 0.9rem; padding: 1rem 1.2rem; border-radius: 12px; font-size: 0.88rem; line-height: 1.45; font-weight: 300; }
+.engage-vs .row.bad { background: rgba(201,154,142,0.14); color: var(--ink); }
+.engage-vs .row.good { background: rgba(151,160,137,0.16); color: var(--ink); }
+.engage-vs .row .ic { font-family: var(--font-display); font-size: 1.5rem; line-height: 1; flex-shrink: 0; font-weight: 500; }
+.engage-vs .row.bad .ic { color: var(--rose); }
+.engage-vs .row.good .ic { color: var(--sage); }
+.engage-vs .row b { color: var(--cocoa); font-weight: 400; }
+
+/* ELEMENTOS ACTIVOS */
+.elementos-bg { background: var(--vanilla); }
+.fisio-block { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.6rem, 2.5vw, 2.2rem); box-shadow: 0 20px 48px -28px rgba(92,75,58,0.34); display: grid; gap: 1.8rem; align-items: center; grid-template-columns: 1fr; margin-top: 2.2rem; }
+@media (min-width: 700px) { .fisio-block { grid-template-columns: 200px 1fr; } }
+.fisio-avatar { width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--clay-soft); box-shadow: 0 16px 36px -14px rgba(92,75,58,0.4); justify-self: center; background: url('fisio.jpg') center 12% / cover no-repeat, url('https://i.ibb.co/gZZnQKFC/CV.jpg') center 12% / cover no-repeat, linear-gradient(140deg, var(--sand-deep), var(--taupe)); }
+.fisio-block .eyebrow { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); font-weight: 500; }
+.fisio-block h3 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 400; color: var(--cocoa); margin: 0.5rem 0 0.8rem; line-height: 1.08; }
+.fisio-block .desc { font-size: 1rem; color: var(--ink); line-height: 1.6; margin-bottom: 1.2rem; font-weight: 300; }
+.fisio-block ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.fisio-block li { font-size: 0.92rem; color: var(--ink); line-height: 1.5; font-weight: 300; }
+.fisio-block li::before { content: '·'; color: var(--clay); font-weight: 500; margin-right: 0.5rem; }
+
+.serv-title { margin-top: 2.8rem; margin-bottom: 1.5rem; font-family: var(--font-display); font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 400; color: var(--cocoa); }
+.serv-grid { display: grid; gap: 1.3rem; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .serv-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1080px) { .serv-grid { grid-template-columns: repeat(3, 1fr); } }
+.serv { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; transition: transform 0.25s, box-shadow 0.25s; box-shadow: 0 14px 36px -26px rgba(92,75,58,0.3); }
+.serv:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -24px rgba(92,75,58,0.4); }
+.serv-icon { font-family: var(--font-display); font-size: 2rem; color: var(--clay); line-height: 1; margin-bottom: 0.5rem; }
+.serv h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--cocoa); line-height: 1.05; }
+.serv > p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.55; font-weight: 300; }
+.serv ul { list-style: none; padding: 0; margin-top: 0.6rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.serv li { font-size: 0.85rem; color: var(--ink); line-height: 1.45; padding-left: 1rem; position: relative; font-weight: 300; }
+.serv li::before { content: '·'; position: absolute; left: 0; color: var(--clay); font-weight: 500; }
+
+.eco-header { text-align: center; margin-top: 3.2rem; padding-top: 2.2rem; border-top: 1px solid var(--line); }
+.eco-header p { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); font-weight: 500; margin-bottom: 0.8rem; }
+.eco-header h3 { font-family: var(--font-display); font-size: clamp(1.9rem, 3.4vw, 2.7rem); font-weight: 400; color: var(--cocoa); line-height: 1.08; max-width: 26ch; margin: 0 auto; }
+
+.bigblock { margin-top: 2rem; }
+.bigblock-inner { background: linear-gradient(125deg, var(--cocoa) 0%, var(--cocoa-deep) 100%); color: var(--cream); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3.4vw, 2.8rem); display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: center; position: relative; overflow: hidden; box-shadow: 0 30px 60px -32px rgba(74,59,45,0.6); }
+@media (min-width: 900px) { .bigblock-inner { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .bigblock-inner.reverse { direction: rtl; } .bigblock-inner.reverse > * { direction: ltr; } }
+.bigblock-text .eyebrow { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); font-weight: 500; }
+.bigblock-text h3 { font-family: var(--font-display); font-size: clamp(1.9rem, 3vw, 2.5rem); font-weight: 400; color: var(--cream); margin: 0.5rem 0 1rem; line-height: 1.05; }
+.bigblock-text > p { color: rgba(247,241,230,0.82); font-size: 0.98rem; line-height: 1.65; margin-bottom: 1.2rem; font-weight: 300; }
+.bigblock-text > p strong { color: var(--clay-soft); font-weight: 500; }
+.bigblock-text ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.bigblock-text li { font-size: 0.92rem; color: rgba(247,241,230,0.85); line-height: 1.55; padding-left: 1.3rem; position: relative; font-weight: 300; }
+.bigblock-text li::before { content: '✓'; position: absolute; left: 0; color: var(--clay-soft); font-weight: 500; }
+.bigblock-art { display: flex; justify-content: center; align-items: center; }
+.bigblock-art svg { width: 100%; height: auto; max-width: 250px; filter: drop-shadow(0 22px 40px rgba(0,0,0,0.3)); }
+.bigblock.dash .bigblock-art svg { max-width: 420px; }
+.phone { width: 230px; max-width: 72%; background: #3a2e22; border-radius: 36px; padding: 13px; box-shadow: 0 34px 64px -24px rgba(0,0,0,0.55); border: 1px solid rgba(199,158,124,0.45); position: relative; }
+.phone::before { content: ''; position: absolute; top: 16px; left: 50%; transform: translateX(-50%); width: 66px; height: 6px; border-radius: 6px; background: rgba(247,241,230,0.28); z-index: 2; }
+.phone-screen { border-radius: 26px; aspect-ratio: 9 / 19.5; background: url('app-fisify.jpg') center / cover no-repeat, url('https://i.ibb.co/7tH7Z7Vj/fisifyweb.webp') center / cover no-repeat, linear-gradient(165deg, var(--vanilla) 0%, var(--sand) 55%, var(--sand-deep) 100%); }
+.cobrand { margin-bottom: 1.9rem; }
+.cobrand-logo { width: 170px; height: 96px; background: url('logo-melia.png') left center / contain no-repeat, url('https://i.ibb.co/TxzQCbSH/Melia-paradisus-GC.jpg') left center / contain no-repeat; mix-blend-mode: multiply; }
+/* CO-BRAND (logos reales, fondo blanco fundido con multiply) */
+.cobrand { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
+.cobrand img { mix-blend-mode: multiply; display: block; height: auto; }
+.cobrand .l-fisify { height: 30px; }
+.cobrand .l-paradisus { height: 70px; }
+.cobrand .sep { color: var(--taupe); font-size: 1.6rem; font-weight: 300; }
+
+/* ROADMAP */
+.roadmap-bg { background: var(--sand); }
+.fases-grid { margin-top: 2.2rem; display: flex; flex-direction: column; gap: 1.2rem; }
+.fase { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 2.1rem 1.9rem; display: grid; gap: 1.6rem; grid-template-columns: 1fr; align-items: start; position: relative; overflow: hidden; box-shadow: 0 16px 40px -28px rgba(92,75,58,0.3); }
+@media (min-width: 760px) { .fase { grid-template-columns: 84px 1fr; } }
+.fase::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--clay-soft); }
+.fase-num { font-family: var(--font-display); font-size: clamp(3.8rem, 5vw, 4.8rem); color: var(--clay-soft); line-height: 1; font-weight: 400; }
+.fase-body h3 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 400; color: var(--cocoa); margin-bottom: 0.4rem; line-height: 1.05; }
+.fase-body > p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 1.2rem; font-weight: 300; }
+.fase-cols { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-bottom: 1rem; }
+@media (min-width: 760px) { .fase-cols { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1080px) { .fase-cols.three { grid-template-columns: repeat(3, 1fr); } }
+.fase-col h5 { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); margin-bottom: 0.6rem; font-weight: 500; }
+.fase-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.fase-col li { font-size: 0.85rem; color: var(--ink); line-height: 1.45; padding-left: 1rem; position: relative; font-weight: 300; }
+.fase-col li::before { content: '·'; position: absolute; left: 0; color: var(--clay); font-weight: 500; }
+.fase-tag { display: inline-block; margin-top: 0.6rem; padding: 0.4rem 0.9rem; background: var(--cocoa); color: var(--cream); font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; border-radius: 100px; font-weight: 400; }
+.fase-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.fase-split-card { background: var(--vanilla); border: 1px solid var(--line-soft); border-radius: 12px; padding: 1rem; text-align: center; }
+.fase-split-card .pct { font-family: var(--font-display); font-size: 1.9rem; font-weight: 400; color: var(--cocoa); line-height: 1; }
+.fase-split-card .l { font-family: var(--font-sans); font-size: 0.68rem; color: var(--ink-soft); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 0.3rem; }
+.fase-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.fase-chip { background: var(--vanilla); color: var(--cocoa); padding: 0.35rem 0.8rem; border-radius: 100px; font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.04em; border: 1px solid var(--line); font-weight: 300; }
+
+/* METRICAS */
+.metricas-bg { background: linear-gradient(140deg, var(--cocoa) 0%, var(--cocoa-deep) 100%); color: var(--cream); }
+.metricas-bg .section-num { color: var(--taupe); }
+.metricas-bg .section-title { color: var(--cream); }
+.metricas-bg .section-title .y { color: var(--clay-soft); }
+.metricas-bg .section-lead { color: rgba(247,241,230,0.72); }
+.roi-table { margin-top: 2.2rem; display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .roi-table { grid-template-columns: 1fr 1fr; } }
+.roi-row { background: rgba(247,241,230,0.06); border: 1px solid rgba(199,158,124,0.3); border-radius: var(--radius); padding: 2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.roi-row-left .when { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay-soft); margin-bottom: 0.4rem; font-weight: 500; }
+.roi-row-left h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: 0.3rem; line-height: 1.1; }
+.roi-row-left p { font-size: 0.88rem; color: rgba(247,241,230,0.72); font-weight: 300; }
+.roi-mult { font-family: var(--font-display); font-size: clamp(3.2rem, 5vw, 4.2rem); color: var(--clay-soft); line-height: 1; font-weight: 400; font-style: italic; }
+.roi-assumptions { margin-top: 1.8rem; background: rgba(247,241,230,0.05); border: 1px dashed rgba(199,158,124,0.36); border-radius: var(--radius); padding: 1.5rem 1.8rem; }
+.roi-assumptions h5 { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay-soft); margin-bottom: 0.7rem; font-weight: 500; }
+.roi-assumptions p { font-size: 0.85rem; color: rgba(247,241,230,0.72); line-height: 1.7; font-weight: 300; }
+.roi-assumptions p strong { color: var(--cream); font-weight: 500; }
+
+/* CASO */
+.caso-bg { background: var(--paper); }
+.caso-stats { display: grid; gap: 1.1rem; grid-template-columns: 1fr 1fr; margin: 2.2rem auto 0; max-width: 780px; }
+@media (min-width: 760px) { .caso-stats { grid-template-columns: repeat(4, 1fr); } }
+.caso-stat { background: var(--vanilla); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem 1.3rem; text-align: center; position: relative; overflow: hidden; }
+.caso-stat::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--clay-soft); }
+.caso-stat .v { font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 400; color: var(--cocoa); line-height: 1; }
+.caso-stat .v.clay { color: var(--clay); }
+.caso-stat .l { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-top: 0.6rem; line-height: 1.3; font-weight: 400; }
+
+/* INVERSIÓN */
+.inversion-bg { background: var(--sand); }
+.dim-note { margin-top: 1.8rem; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--clay); border-radius: var(--radius); padding: 1.5rem 1.8rem; box-shadow: 0 16px 40px -30px rgba(92,75,58,0.3); }
+.dim-note h5 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay); font-weight: 500; margin-bottom: 0.7rem; }
+.dim-note p { font-size: 0.92rem; color: var(--ink); line-height: 1.65; font-weight: 300; }
+.dim-note p strong { color: var(--cocoa); font-weight: 500; }
+.price-table-wrap { margin-top: 2.2rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.price-table { width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 48px -30px rgba(92,75,58,0.32); }
+.price-table th, .price-table td { padding: 0.9rem 1rem; text-align: center; border-bottom: 1px solid var(--line-soft); vertical-align: middle; font-size: 0.9rem; color: var(--ink); font-weight: 300; }
+.price-table thead th { background: linear-gradient(140deg, var(--cocoa), var(--cocoa-deep)); padding-top: 1.5rem; padding-bottom: 1.5rem; color: var(--cream); }
+.price-table .col-feat { text-align: left; font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-soft); letter-spacing: 0.01em; background: var(--vanilla); font-weight: 400; }
+.price-table .tier-h { font-family: var(--font-display); font-size: 1.7rem; font-weight: 400; color: var(--clay-soft); line-height: 1; margin-bottom: 0.3rem; display: block; }
+.price-table .tier-cad { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,241,230,0.6); display: block; margin-bottom: 0.8rem; }
+.price-table .tier-price-big { font-family: var(--font-display); font-size: 2rem; font-weight: 400; line-height: 1; color: var(--cream); }
+.price-table .tier-price-big small { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 300; color: rgba(247,241,230,0.6); display: block; margin-top: 0.3rem; letter-spacing: 0; }
+.tick { font-family: var(--font-display); font-size: 1.5rem; color: var(--clay); line-height: 1; font-weight: 500; }
+.tdash { font-family: var(--font-display); font-size: 1.3rem; color: var(--taupe); line-height: 1; }
+.price-table tbody tr:last-child td { border-bottom: 0; }
+.price-table .val-small { font-family: var(--font-sans); font-size: 0.84rem; color: var(--cocoa); font-weight: 500; }
+.price-table .row-sub { font-family: var(--font-sans); font-size: 0.66rem; color: var(--ink-soft); display: block; margin-top: 0.15rem; letter-spacing: 0.02em; font-weight: 300; }
+.price-section-header { background: var(--vanilla) !important; font-family: var(--font-sans) !important; font-size: 0.7rem !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--clay) !important; text-align: left !important; padding: 0.95rem 1rem !important; font-weight: 500; border-top: 1px solid var(--line); }
+.price-note { margin-top: 1.2rem; font-size: 0.85rem; color: var(--ink-soft); font-weight: 300; }
+
+/* COMPROMISO */
+.compromiso-bg { background: var(--vanilla); padding: clamp(4rem, 8vw, 6.5rem) 0; }
+.compromiso-statement { max-width: 740px; margin: 0 auto; text-align: center; font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 400; line-height: 1.18; color: var(--cocoa); margin-bottom: 2rem; }
+.compromiso-statement em { color: var(--clay); font-style: italic; }
+.compromiso-text { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.08rem; color: var(--ink-soft); line-height: 1.7; font-weight: 300; }
+.compromiso-text strong { color: var(--cocoa); font-weight: 500; }
+.compromiso-card { max-width: 540px; margin: 3rem auto 0; background: var(--paper); border-radius: var(--radius-lg); padding: 2.2rem; border: 1px solid var(--line); text-align: center; box-shadow: 0 20px 48px -28px rgba(92,75,58,0.34); }
+.compromiso-card .signature { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.6rem; font-weight: 400; }
+.compromiso-card .names { font-family: var(--font-display); font-size: 1.9rem; font-weight: 400; color: var(--cocoa); }
+
+/* FOOTER */
+.footer { background: linear-gradient(140deg, var(--cocoa), var(--cocoa-deep)); color: rgba(247,241,230,0.6); padding: 3.2rem 0; text-align: center; font-size: 0.85rem; border-top: 3px solid var(--clay-soft); font-weight: 300; }
+.footer strong { color: var(--clay-soft); font-weight: 400; }
+
+/* ROI section (estilo Jardines) */
+.roi2-stats { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin-top: 2.2rem; }
+@media (min-width: 760px) { .roi2-stats { grid-template-columns: repeat(4, 1fr); } }
+.roi2-stat { background: rgba(247,241,230,0.06); border: 1px solid rgba(199,158,124,0.25); border-radius: var(--radius); padding: 1.5rem 1.2rem; text-align: center; }
+.roi2-stat .v { font-family: var(--font-display); font-size: clamp(2rem,3.5vw,2.8rem); color: var(--clay-soft); line-height: 1; font-weight: 400; }
+.roi2-stat .l { font-family: var(--font-sans); font-size: 0.72rem; color: rgba(247,241,230,0.72); margin-top: 0.5rem; line-height: 1.4; font-weight: 300; }
+.roi2-cost-title { font-family: var(--font-display); font-size: clamp(1.4rem,2.4vw,1.9rem); color: var(--cream); margin: 2.8rem 0 0.6rem; font-weight: 400; }
+.roi2-cost-lead { font-size: 0.92rem; color: rgba(247,241,230,0.72); max-width: 72ch; line-height: 1.6; font-weight: 300; }
+.roi2-cost-lead strong { color: var(--cream); font-weight: 500; }
+.roi2-flow { display: grid; gap: 0.8rem; grid-template-columns: 1fr; margin-top: 1.4rem; }
+@media (min-width: 820px) { .roi2-flow { grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; } }
+.roi2-flow-card { background: rgba(247,241,230,0.06); border: 1px solid rgba(199,158,124,0.25); border-radius: var(--radius); padding: 1.3rem 1.4rem; }
+.roi2-flow-card .k { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay-soft); font-weight: 500; }
+.roi2-flow-card .big { font-family: var(--font-display); font-size: clamp(1.6rem,3vw,2.2rem); color: var(--cream); line-height: 1; margin: 0.4rem 0; font-weight: 400; }
+.roi2-flow-card p { font-size: 0.8rem; color: rgba(247,241,230,0.68); line-height: 1.45; font-weight: 300; }
+.roi2-flow-card.real { background: rgba(178,107,84,0.2); border-color: var(--clay); }
+.roi2-arrow { text-align: center; color: var(--clay-soft); font-size: 1.5rem; }
+.roi2-scen { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.4rem; }
+@media (min-width: 760px) { .roi2-scen { grid-template-columns: repeat(3, 1fr); } }
+.roi2-scen-card { background: rgba(247,241,230,0.06); border: 1px solid rgba(199,158,124,0.25); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
+.roi2-scen-card.base { background: rgba(178,107,84,0.2); border-color: var(--clay); }
+.roi2-scen-card .tag { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,241,230,0.6); font-weight: 500; }
+.roi2-scen-card .pct { font-family: var(--font-display); font-size: 2.4rem; color: var(--cream); line-height: 1; margin: 0.3rem 0; font-weight: 400; }
+.roi2-scen-card .ah { font-size: 0.84rem; color: rgba(247,241,230,0.78); font-weight: 300; }
+.roi2-scen-card .roi { font-family: var(--font-display); font-size: 1.7rem; color: var(--clay-soft); margin-top: 0.4rem; font-weight: 400; }
+.roi2-note { margin-top: 1rem; font-size: 0.78rem; color: rgba(247,241,230,0.6); line-height: 1.55; font-weight: 300; }
+.roi2-punch { margin-top: 1.8rem; background: rgba(178,107,84,0.16); border-left: 4px solid var(--clay); border-radius: var(--radius); padding: 1.5rem 1.7rem; }
+.roi2-punch h5 { font-family: var(--font-display); font-size: 1.4rem; color: var(--cream); font-weight: 400; margin-bottom: 0.4rem; }
+.roi2-punch p { font-size: 0.9rem; color: rgba(247,241,230,0.8); line-height: 1.6; font-weight: 300; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <div class="cobrand"><div class="cobrand-logo" role="img" aria-label="Paradisus by Meliá"></div></div>
+    <div class="hero-eyebrow">Fisify <span style="color:var(--taupe)">×</span> Paradisus Gran Canaria</div>
+    <h1 class="hero-title">Plan de <span class="y">Acción.</span></h1>
+    <div class="hero-subtitle">Programa de Salud Física · 12 meses</div>
+    <a href="#diagnostico" class="hero-cta">Descubre el plan ↓</a>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <h4>Destinatario</h4>
+        <p>Dirección y PRL<br><span style="color:var(--ink-soft);font-size:0.9rem">Paradisus Gran Canaria</span></p>
+      </div>
+      <div class="hero-meta-item">
+        <h4>Fuentes</h4>
+        <p>Informe de absentismo Mutua Universal<br>Abr 2025 – Abr 2026<br>Plantilla media · junio 2026</p>
+      </div>
+      <div class="hero-meta-item">
+        <h4>Autores</h4>
+        <p>Laura López</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 1. FASE DE DIAGNÓSTICO -->
+<section id="diagnostico" class="diag-bg">
+  <div class="container">
+    <p class="section-num">Fase de Diagnóstico</p>
+    <h2 class="section-title">Tras analizar vuestros datos, <span class="y">descubrimos que…</span></h2>
+    <p class="section-lead">El absentismo de Paradisus Gran Canaria no es estructural del sector: es físico, está concentrado y es prevenible. Cuatro vectores confirman que el plan es ejecutable y que el impacto será visible en 12 meses.</p>
+
+    <div class="diag-kpis">
+      <div class="diag-kpi">
+        <div class="label">Causa #1 prevenible</div>
+        <div class="pct">112<span style="font-size:1.2rem"> días</span></div>
+        <p>Las patologías osteo-mio-articulares son el grupo diagnóstico <strong>más frecuente y el de mayor duración media</strong> (112 días/baja). Es exactamente lo que la fisioterapia previene y trata.</p>
+      </div>
+      <div class="diag-kpi">
+        <div class="label">Concentración del problema</div>
+        <div class="pct">75%</div>
+        <p>Tres áreas —Cocina, Pisos y Restauración— concentran el 75% de la baja médica de la plantilla. Foco claro, intervención eficiente.</p>
+      </div>
+      <div class="diag-kpi">
+        <div class="label">Plantilla y canal</div>
+        <div class="pct">~360</div>
+        <p>Plantilla media con departamentos físicos bien definidos y mandos intermedios (gobernantas, jefes de cocina, jefes de sector) que ya gestionan bajas: el canal natural para hacer llegar el programa.</p>
+      </div>
+      <div class="diag-kpi space-card">
+        <div class="label">Espacios y operativa</div>
+        <div class="pct">Sala de fisio y formaciones en el hotel</div>
+        <p>Habilitamos una consulta fija dentro de las instalaciones para el fisioterapeuta de referencia. Operativa desde el día 1.</p>
+        <span class="pending">Imagen del espacio · pendiente de incorporar</span>
+      </div>
+    </div>
+
+    <div class="roi-callout">
+      <div>
+        <h3>ROI & Business Case</h3>
+        <p class="roi-headline">Absentismo por IT <strong>12,0%</strong> vs media nacional <strong>5,5%</strong> — <strong>×2,2</strong>. El problema no viene del sector: es específico de Paradisus, y por tanto reversible.</p>
+      </div>
+      <div class="roi-fit">
+        <div class="num">95%</div>
+        <div class="lbl">Fit con el servicio</div>
+      </div>
+    </div>
+
+    <!-- VIDEO GRID -->
+    <div class="bio-compact">
+      <h3>Lo que vimos en los puestos críticos</h3>
+      <p class="lead">Secuencias grabadas durante la visita y analizadas como estudio ergonómico: gesto, carga y patología predicha en cada puesto. Vídeos a velocidad real, sin audio.</p>
+
+      <div class="bio-grouplabel">Pisos y zonas comunes</div>
+      <div class="bio-grid-c">
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4799.mp4" poster="IMG_4799.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">01 · Zonas comunes</span><span class="bioc-risk critical">Crítico</span></div>
+            <h4>Limpieza de cristal en altura</h4>
+            <div class="bioc-area">Camarera de pisos · cristalería</div>
+            <p>Brazo en flexión por encima de la cabeza (&gt;150°) de forma sostenida y repetida, con extensión cervical para seguir la mano. <strong>Sobrecarga del manguito rotador y de la charnela cervical.</strong></p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4800.mp4" poster="IMG_4800.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">02 · Pisos</span><span class="bioc-risk critical">Crítico</span></div>
+            <h4>Hacer la cama</h4>
+            <div class="bioc-area">Camarera de pisos · habitación</div>
+            <p>Flexión de tronco repetida sobre el colchón, estiramiento de sábanas y empuje. Decenas de ciclos por habitación: <strong>principal foco de lumbalgia en pisos.</strong></p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4797.mp4" poster="IMG_4797.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">03 · Zonas comunes</span><span class="bioc-risk high">Alto</span></div>
+            <h4>Limpieza tras el sofá y mobiliario bajo</h4>
+            <div class="bioc-area">Camarera de pisos · salón</div>
+            <p>Alcance a zonas altas (hombro) seguido de flexión anterior profunda para limpiar zonas bajas. <strong>Combinación hombro + lumbar en un mismo gesto.</strong></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="bio-grouplabel">Cocina y steward</div>
+      <div class="bio-grid-c">
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4807.mp4" poster="IMG_4807.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">05 · Steward</span><span class="bioc-risk critical">Crítico</span></div>
+            <h4>Transporte de bolsa de basura</h4>
+            <div class="bioc-area">Steward · retirada de residuos</div>
+            <p>Carga unilateral de hasta 25 kg con marcha e inclinación lateral del tronco. <strong>Compresión asimétrica lumbar (L4-L5)</strong> y sobrecarga del hombro portador.</p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4815.mp4" poster="IMG_4815.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">06 · Cocina</span><span class="bioc-risk critical">Crítico</span></div>
+            <h4>Fregado de bandejas gastronorm</h4>
+            <div class="bioc-area">Steward · fregaderos</div>
+            <p>Flexión de tronco mantenida sobre el fregadero con fregado vigoroso. <strong>Carga estática lumbar prolongada</strong> más esfuerzo repetido de muñeca y hombro.</p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4814.mp4" poster="IMG_4814.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">07 · Cocina</span><span class="bioc-risk high">Alto</span></div>
+            <h4>Despiece y corte de carne</h4>
+            <div class="bioc-area">Cocina · partida</div>
+            <p>Fuerza repetida de muñeca y antebrazo con flexión cervical sostenida sobre la tabla. <strong>Epicondilitis, tenosinovitis y cervicalgia</strong> — justo el dolor de hombro, codo y muñeca que describe la plantilla.</p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4813.mp4" poster="IMG_4813.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">08 · Economato</span><span class="bioc-risk high">Alto</span></div>
+            <h4>Manipulación de cajas de mercancía</h4>
+            <div class="bioc-area">Steward · recepción de género</div>
+            <p>Levantamiento de cajas desde el carro con flexión y giro de tronco. <strong>Levantamiento con torsión:</strong> mecanismo clásico de lumbalgia aguda y hernia discal.</p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4810.mp4" poster="IMG_4810.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">09 · Cocina</span><span class="bioc-risk medium">Medio</span></div>
+            <h4>Trabajo en plancha · zona caliente</h4>
+            <div class="bioc-area">Cocina · servicio</div>
+            <p>Bipedestación con tronco inclinado sobre la plancha y gesto repetido de brazo y muñeca, bajo estrés térmico. <strong>Sobrecarga de hombro y región dorsolumbar.</strong></p>
+          </div>
+        </article>
+        <article class="bioc">
+          <video class="bioc-video" src="IMG_4811.mp4" poster="IMG_4811.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head"><span class="bioc-id">10 · Steward</span><span class="bioc-risk medium">Medio</span></div>
+            <h4>Apilado de vajilla en office</h4>
+            <div class="bioc-area">Steward · office</div>
+            <p>Manejo repetido de pilas de platos con elevación de hombro y desviación de muñeca, en bipedestación con giros. <strong>Tendinopatía de hombro y sobrecarga de muñeca.</strong></p>
+          </div>
+        </article>
+      </div>
+
+      <p style="margin-top:1.8rem; font-size:0.92rem; color:var(--ink-soft); max-width:72ch; font-weight:300;">Cocina, Pisos y Restauración suman <strong style="color:var(--cocoa); font-weight:500;">~214 trabajadores</strong> y concentran <strong style="color:var(--clay); font-weight:500;">el 75% de la baja médica</strong> del hotel. Intervenir aquí mueve la aguja del absentismo de todo Paradisus.</p>
+    </div>
+
+    <!-- VOCES DE LA VISITA -->
+    <div class="voces">
+      <div class="voces-head">
+        <h3>Lo que nos contó la plantilla</h3>
+        <p class="lead">Los datos confirman el problema; las personas le ponen cara. Esto es lo que escuchamos durante la visita.</p>
+      </div>
+      <div class="voces-grid">
+        <div class="voz">
+          <blockquote>"Hoy mismo tengo un <em>pinzamiento</em>. El trabajo en cocina y steward es duro: se cogen bandejas de 8-10 kg, garrafas de 20 litros, bolsas de basura que a veces llegan a los 25 kg."</blockquote>
+          <div class="who"><span class="av">J</span><span><span class="name">Joaquín</span><br><span class="role">Chief Steward</span></span></div>
+        </div>
+        <div class="voz">
+          <blockquote>"Iría más veces porque tengo mucho dolor en hombro, codo y muñeca, pero no puedo costearme más de una sesión al mes; <em>por eso tengo que medicarme a diario</em>. Mis compañeros y yo participaríamos activamente, incluso fuera del horario laboral. Sería una maravilla."</blockquote>
+          <div class="who"><span class="av">M</span><span><span class="name">Mónica</span><br><span class="role">Steward</span></span></div>
+        </div>
+        <div class="voz">
+          <blockquote>"Sería raro decir que mis trabajadoras no se quejan de dolor: <em>muchas trabajan con molestias</em> y algunas se pagan el fisio por su cuenta."</blockquote>
+          <div class="who"><span class="av">A</span><span><span class="name">Ana</span><br><span class="role">Jefa de Pisos y Zonas Comunes</span></span></div>
+        </div>
+        <div class="voz">
+          <blockquote>"Tengo una lesión ahora mismo. Acudo al fisio por mi cuenta y <em>aun así vengo a trabajar con dolor</em>."</blockquote>
+          <div class="who"><span class="av">F</span><span><span class="name">Fátima</span><br><span class="role">Limpieza de Zonas Comunes</span></span></div>
+        </div>
+      </div>
+      <div class="voces-insight">
+        <div class="vi"><div class="v">Presentismo</div><p>Empleados que trabajan con dolor. Coste invisible que no aparece en la baja, pero sí en la productividad y la calidad de servicio.</p></div>
+        <div class="vi"><div class="v">Demanda ya existente</div><p>Hay trabajadores que ya se pagan el fisio de su bolsillo. La necesidad está; lo que falta es el acceso.</p></div>
+        <div class="vi"><div class="v">Participarían fuera de horario</div><p>La propia plantilla pide el servicio. El engagement no será un problema: es justo lo contrario de una app que nadie abre.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. EL CAMBIO -->
+<section class="cambio-bg">
+  <div class="container">
+    <p class="section-num">El Cambio</p>
+    <h2 class="section-title">De Reactivo <span class="y">a 360</span></h2>
+    <p class="section-lead">El mismo modelo que ya funciona en Meliá Castilla. Adaptado a Paradisus Gran Canaria.</p>
+
+    <div class="modelos">
+      <div class="modelo-card actual">
+        <div class="modelo-label">Modelo Actual</div>
+        <h3>Empleado con dolor → baja → mutua</h3>
+        <div class="flow-actual">Empleado tiene dolor <span class="arrow">→</span> Aguanta <span class="arrow">→</span> Empeora <span class="arrow">→</span> Baja médica <span class="arrow">→</span> Mutua <span class="arrow">→</span> Meses fuera</div>
+        <p class="modelo-footer">Equivalente a <strong>~43 trabajadores a tiempo completo fuera cada mes</strong> por baja médica · ≈ 440.000 €/año de coste real (coste directo ×2) · equipos sobrecargados en plena temporada.</p>
+      </div>
+      <div class="modelo-card fisify">
+        <div class="modelo-label">Modelo Fisify 360</div>
+        <h3>Tres anillos que se refuerzan</h3>
+        <div class="fisify-pillar"><div class="num">1</div><div><h4>Prevención</h4><div class="when">Antes del dolor</div><p>Empleado sano → App + ejercicios → Clases grupales → Se mantiene sano.</p></div></div>
+        <div class="fisify-pillar"><div class="num">2</div><div><h4>Detección temprana</h4><div class="when">Primeras molestias</div><p>Empleado con molestia → Chat o cita rápida → Plan personalizado → Sin baja.</p></div></div>
+        <div class="fisify-pillar"><div class="num">3</div><div><h4>Recuperación acelerada</h4><div class="when">Si hay lesión</div><p>Empleado lesionado → Tratamiento intensivo → Seguimiento diario → Vuelve antes.</p></div></div>
+      </div>
+    </div>
+
+    <div class="cambio-banner">Sin bajas largas · Equipos productivos · Recuperación <strong>×3</strong> más rápida</div>
+
+    <!-- ENGAGEMENT -->
+    <div class="engage">
+      <div>
+        <div class="eyebrow">Por qué esta vez sí funciona</div>
+        <h3>Una app sola no genera adherencia. Una persona, sí.</h3>
+        <p>Lo habéis vivido: una herramienta de bienestar puramente digital arranca con ilusión y al mes nadie la abre. Sin alguien detrás, el engagement se desploma y la inversión se evapora.</p>
+        <p><strong>Fisify es lo contrario de una app suelta.</strong> Detrás de la plataforma hay un fisioterapeuta presencial —siempre el mismo— que conoce a los empleados por su nombre, los trata en el hotel y les hace seguimiento por chat. Esa relación cercana es la que crea hábito, confianza y participación sostenida.</p>
+        <p>Sumamos gamificación con premios, clases grupales y comunicación interna: una batería de estrategias de engagement pensadas para que la plantilla entre y se quede.</p>
+      </div>
+      <div class="engage-vs">
+        <div class="row bad"><span class="ic">—</span><span><b>App de salud sin presencia</b><br>Alta inicial, engagement que cae, datos pobres, sin impacto en bajas.</span></div>
+        <div class="row good"><span class="ic">+</span><span><b>Mismo fisio, cara conocida</b><br>Trato cercano y continuo. Los empleados se sienten acompañados, no monitorizados.</span></div>
+        <div class="row good"><span class="ic">+</span><span><b>Presencial + digital</b><br>La consulta en el hotel tira de la app: cita, chat y ejercicios en un mismo flujo.</span></div>
+        <div class="row good"><span class="ic">+</span><span><b>Adherencia medible</b><br>Gamificación, clases y premios mantienen la participación mes a mes.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ELEMENTOS ACTIVOS -->
+<section class="elementos-bg">
+  <div class="container">
+    <p class="section-num">Durante todo el programa</p>
+    <h2 class="section-title">Elementos <span class="y">Activos</span></h2>
+    <p class="section-lead">Servicios y herramientas disponibles desde el día 1 hasta el cierre del año.</p>
+
+    <div class="fisio-block">
+      <div class="fisio-avatar" role="img" aria-label="Fisioterapeuta asignado"></div>
+      <div>
+        <div class="eyebrow">Vuestro fisioterapeuta</div>
+        <h3>Fisioterapeuta asignado, siempre el mismo</h3>
+        <p class="desc">Una única cara de referencia durante todo el programa, disponible tanto en sesiones presenciales en el hotel como de forma digital. La continuidad es lo que crea adherencia y confianza.</p>
+        <ul>
+          <li>Colegiado, con experiencia en hostelería, cocina y pisos</li>
+          <li>Conoce a cada empleado y su caso en detalle</li>
+          <li>Presencial en el hotel · misma persona cada visita</li>
+          <li>Accesible por videollamada y chat</li>
+          <li>Seguimiento personalizado y continuo</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serv-title">Servicios Clave</h3>
+    <div class="serv-grid">
+      <div class="serv"><div class="serv-icon">❋</div><h4>Fisioterapia Presencial</h4><p>Consulta de fisioterapia dentro del hotel con fisioterapeutas colegiados.</p><ul><li>Sesiones individuales de 30 minutos</li><li>Tratamiento manual personalizado</li><li>Diagnóstico y plan de recuperación</li><li>Seguimiento continuo entre sesiones</li></ul></div>
+      <div class="serv"><div class="serv-icon">◐</div><h4>Fisioterapia Digital</h4><p>El fisioterapeuta mantiene contacto activo con el empleado durante todo el programa.</p><ul><li>Videollamadas bajo demanda</li><li>Planes de ejercicio personalizados</li><li>Seguimiento semanal (~10 min/paciente)</li></ul></div>
+      <div class="serv"><div class="serv-icon">❀</div><h4>Formación y Clases</h4><p>Sesiones formativas y clases grupales para toda la plantilla, presenciales u online.</p><ul><li>Charlas de bienvenida y lanzamiento</li><li>Clases de espalda sana</li><li>Formación en ergonomía del puesto</li><li>Sesiones grupales por patología</li></ul></div>
+      <div class="serv"><div class="serv-icon">∞</div><h4>Chat Infinito con tu Fisio</h4><p>Comunicación ilimitada con tu fisioterapeuta asignado durante todo el programa.</p><ul><li>Respuesta en menos de 24 horas</li><li>Sin límite de mensajes</li><li>Consultas sobre ejercicios y dolores</li><li>Seguimiento de tu evolución</li></ul></div>
+      <div class="serv"><div class="serv-icon">✦</div><h4>Gamificación mensual</h4><p>Ranking + sorteo de premios para mantener la adherencia alta. La gestión y el envío del regalo lo hacemos nosotros — vosotros no tocáis logística.</p><ul><li>Regalos valorados en 50-70 € cada mes</li><li>Gestión y envío al ganador desde Fisify</li><li>Ranking visible en la app</li><li>Refuerza el hábito mes a mes</li></ul></div>
+    </div>
+
+    <div class="eco-header">
+      <p>Todo unido en un ecosistema</p>
+      <h3>La consulta presencial y la app tiran la una de la otra.</h3>
+    </div>
+
+    <div class="bigblock">
+      <div class="bigblock-inner">
+        <div class="bigblock-text">
+          <div class="eyebrow">Para el empleado</div>
+          <h3>App Fisify</h3>
+          <p>Todo lo que el empleado necesita para cuidarse, <strong>en el móvil</strong> y conectado con su fisioterapeuta de referencia.</p>
+          <ul><li>Catálogo de ejercicios guiados</li><li>Plan personalizado por patología</li><li>Chat directo con su fisio</li><li>Videollamada bajo demanda</li><li>Agendar cita presencial</li><li>Ranking y gamificación</li></ul>
+        </div>
+        <div class="bigblock-art" aria-hidden="true">
+          <div class="phone"><div class="phone-screen"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eco-header">
+      <p>Visibilidad en tiempo real</p>
+      <h3>Toda la información del programa, accesible para Dirección y PRL en cualquier momento.</h3>
+    </div>
+
+    <div class="bigblock dash">
+      <div class="bigblock-inner reverse">
+        <div class="bigblock-text">
+          <div class="eyebrow">Para Dirección y PRL</div>
+          <h3>Analítica y Dashboard</h3>
+          <p>Dirección y PRL siguen la evolución del programa <strong>en tiempo real</strong>. Mismo lenguaje que el informe de la mutua, sin necesidad de traducción.</p>
+          <ul><li>Panel en tiempo real</li><li>Informes mensuales por departamento</li><li>Empleados atendidos y sesiones realizadas</li><li>Evolución del dolor y adherencia por cohorte</li><li>Satisfacción (NPS) y feedback abierto</li><li>Reporte compatible con mutua y PRL</li></ul>
+        </div>
+        <div class="bigblock-art dash-art" aria-hidden="true">
+          <svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="360" height="240" rx="10" fill="#4A3B2D"/>
+            <rect x="22" y="22" width="336" height="216" rx="6" fill="#FBF7EE"/>
+            <rect x="32" y="32" width="100" height="8" rx="2" fill="#5C4B3A"/>
+            <rect x="32" y="46" width="70" height="6" rx="2" fill="#87796A"/>
+            <circle cx="338" cy="40" r="8" fill="#B07E5B"/>
+            <rect x="32" y="68" width="78" height="56" rx="6" fill="#fff" stroke="#E7DBC8"/>
+            <rect x="40" y="76" width="30" height="5" rx="2" fill="#B26B54"/>
+            <rect x="40" y="88" width="55" height="14" rx="2" fill="#5C4B3A"/>
+            <rect x="40" y="108" width="40" height="4" rx="2" fill="#97A089"/>
+            <rect x="118" y="68" width="78" height="56" rx="6" fill="#fff" stroke="#E7DBC8"/>
+            <rect x="126" y="76" width="30" height="5" rx="2" fill="#B26B54"/>
+            <rect x="126" y="88" width="48" height="14" rx="2" fill="#5C4B3A"/>
+            <rect x="126" y="108" width="40" height="4" rx="2" fill="#97A089"/>
+            <rect x="204" y="68" width="78" height="56" rx="6" fill="#fff" stroke="#E7DBC8"/>
+            <rect x="212" y="76" width="30" height="5" rx="2" fill="#B26B54"/>
+            <rect x="212" y="88" width="52" height="14" rx="2" fill="#5C4B3A"/>
+            <rect x="212" y="108" width="40" height="4" rx="2" fill="#97A089"/>
+            <rect x="290" y="68" width="68" height="56" rx="6" fill="#B07E5B"/>
+            <rect x="298" y="76" width="30" height="5" rx="2" fill="#FBF7EE"/>
+            <rect x="298" y="88" width="42" height="14" rx="2" fill="#FBF7EE"/>
+            <rect x="298" y="108" width="34" height="4" rx="2" fill="#FBF7EE" opacity="0.6"/>
+            <rect x="32" y="134" width="200" height="100" rx="6" fill="#fff" stroke="#E7DBC8"/>
+            <rect x="42" y="144" width="56" height="6" rx="2" fill="#5C4B3A"/>
+            <polyline points="42,210 70,194 100,200 130,170 160,178 190,150 220,140" stroke="#97A089" stroke-width="2.5" fill="none"/>
+            <polyline points="42,218 70,210 100,212 130,198 160,206 190,188 220,184" stroke="#B07E5B" stroke-width="2.5" fill="none"/>
+            <rect x="240" y="134" width="118" height="100" rx="6" fill="#fff" stroke="#E7DBC8"/>
+            <rect x="250" y="144" width="60" height="6" rx="2" fill="#5C4B3A"/>
+            <rect x="250" y="160" width="98" height="4" rx="2" fill="#E7DBC8"/>
+            <rect x="250" y="170" width="98" height="4" rx="2" fill="#E7DBC8"/>
+            <rect x="250" y="180" width="98" height="4" rx="2" fill="#E7DBC8"/>
+            <rect x="250" y="190" width="98" height="4" rx="2" fill="#E7DBC8"/>
+            <rect x="250" y="200" width="98" height="4" rx="2" fill="#E7DBC8"/>
+            <rect x="250" y="210" width="68" height="4" rx="2" fill="#B07E5B"/>
+            <rect x="250" y="220" width="98" height="4" rx="2" fill="#E7DBC8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ROADMAP -->
+<section class="roadmap-bg">
+  <div class="container">
+    <p class="section-num">Roadmap</p>
+    <h2 class="section-title">Las 5 fases <span class="y">del programa.</span></h2>
+    <p class="section-lead">Plan estructurado anual diseñado para atacar primero las áreas con más baja médica y consolidar hábitos sostenibles a lo largo de los 12 meses.</p>
+
+    <div class="fases-grid">
+      <article class="fase">
+        <div class="fase-num">0</div>
+        <div class="fase-body">
+          <h3>Preparación</h3>
+          <p>Tener todo listo antes del lanzamiento para maximizar el impacto desde el día 1.</p>
+          <div class="fase-cols">
+            <div class="fase-col"><h5>Decisiones críticas</h5><ul><li>Criterios de inclusión con dirección (foco osteo-mio-articular)</li><li>Prioridad: lesión activa · historial MSK · &gt;49 años</li><li>Orden de áreas: 1º Cocina → 2º Pisos → 3º Restauración</li></ul></div>
+            <div class="fase-col"><h5>Comunicación</h5><ul><li>Plan de comunicación interno (carteles, email, intranet, WhatsApp)</li><li>Coordinación con gobernantas y jefes de cocina como amplificadores</li><li>Material de bienvenida y onboarding del programa</li></ul></div>
+          </div>
+          <span class="fase-tag">Base del éxito</span>
+        </div>
+      </article>
+      <article class="fase">
+        <div class="fase-num">1</div>
+        <div class="fase-body">
+          <h3>Lanzamiento</h3>
+          <p>Que la plantilla conozca el programa y pueda darse de alta desde el día 1.</p>
+          <div class="fase-cols">
+            <div class="fase-col"><h5>Offline</h5><ul><li>Charla de bienvenida del fisioterapeuta en distintos turnos</li><li>Cartelería en vestuarios, office y comedor de personal</li><li>Punto de información en zonas de paso</li></ul></div>
+            <div class="fase-col"><h5>Online</h5><ul><li>Email de presentación a toda la plantilla</li><li>Publicación en intranet corporativa</li><li>Comunicación por WhatsApp</li><li>Arranque de la gamificación con premios mensuales</li></ul></div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.6rem; font-weight:300;"><strong style="color: var(--cocoa); font-weight:500;">Objetivo:</strong> dar de alta a la mayor parte de la plantilla en la app.</p>
+          <div class="fase-tags"><span class="fase-chip">Catálogo de ejercicios</span><span class="fase-chip">Chat con fisio</span><span class="fase-chip">Agendar citas</span></div>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Arranque del programa</span></div>
+        </div>
+      </article>
+      <article class="fase">
+        <div class="fase-num">2</div>
+        <div class="fase-body">
+          <h3>Evaluación</h3>
+          <p>Diagnosticar a los empleados prioritarios de Cocina, Pisos y Restauración y diseñar su plan personalizado.</p>
+          <div class="fase-cols">
+            <div class="fase-col"><h5>Cada sesión (30 min) incluye</h5><ul><li>Diagnóstico físico de la zona más afectada</li><li>Tratamiento inicial con técnicas manuales</li><li>Plan personalizado diseñado en el momento</li><li>Alta en app con seguimiento activado</li></ul></div>
+            <div class="fase-col"><h5>En paralelo</h5><ul><li>Resto de empleados activos en la app</li><li>Chat directo con el fisio para consultas</li><li>Participación en la gamificación</li></ul></div>
+          </div>
+          <div class="fase-tags"><span class="fase-chip">30 min/sesión</span><span class="fase-chip">6 semanas</span></div>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Diagnóstico individual</span></div>
+        </div>
+      </article>
+      <article class="fase">
+        <div class="fase-num">3</div>
+        <div class="fase-body">
+          <h3>Activación</h3>
+          <p>El empleado pasa de "me tratan" a "yo me cuido".</p>
+          <div class="fase-split">
+            <div class="fase-split-card"><div class="pct">50%</div><div class="l">Camilla</div></div>
+            <div class="fase-split-card"><div class="pct">50%</div><div class="l">Ejercicios</div></div>
+          </div>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li style="font-size: 0.88rem; color: var(--ink); line-height: 1.5; padding-left: 1rem; position: relative; font-weight:300;"><span style="position: absolute; left: 0; color: var(--clay); font-weight: 500;">·</span>Sesiones individuales activas: el fisio enseña, corrige y supervisa</li>
+            <li style="font-size: 0.88rem; color: var(--ink); line-height: 1.5; padding-left: 1rem; position: relative; font-weight:300;"><span style="position: absolute; left: 0; color: var(--clay); font-weight: 500;">·</span>Evolución natural: cada semana menos camilla, más ejercicios</li>
+            <li style="font-size: 0.88rem; color: var(--ink); line-height: 1.5; padding-left: 1rem; position: relative; font-weight:300;"><span style="position: absolute; left: 0; color: var(--clay); font-weight: 500;">·</span>El empleado ve cómo evolucionan su fuerza y su dolor, y coge el hábito</li>
+          </ul>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Cambio de mentalidad</span></div>
+        </div>
+      </article>
+      <article class="fase">
+        <div class="fase-num">4</div>
+        <div class="fase-body">
+          <h3>Consolidación</h3>
+          <p>Hábitos sostenibles combinando atención individual y grupal hasta cerrar el año.</p>
+          <div class="fase-cols three">
+            <div class="fase-split-card"><div class="pct">25%</div><div class="l">Camilla · casos críticos</div></div>
+            <div class="fase-split-card"><div class="pct">25%</div><div class="l">Individual · seguimiento</div></div>
+            <div class="fase-split-card"><div class="pct">50%</div><div class="l">Grupal · 4-6 personas</div></div>
+          </div>
+          <h5 style="font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); margin: 1rem 0 0.6rem; font-weight: 500;">Clases grupales por patología</h5>
+          <div class="fase-tags"><span class="fase-chip">Espalda sana</span><span class="fase-chip">Hombro y cervical</span><span class="fase-chip">Miembro inferior</span><span class="fase-chip">Suelo pélvico</span><span class="fase-chip">Antiestrés</span></div>
+          <p style="font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.8rem; font-weight:300;"><strong style="color: var(--cocoa); font-weight:500;">Beneficio:</strong> cohesión entre departamentos y prevención sostenida en las áreas diana.</p>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Hábitos sostenibles</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. MÉTRICAS -->
+<section class="metricas-bg">
+  <div class="container">
+    <p class="section-num">El retorno</p>
+    <h2 class="section-title">El ROI: <span class="y">por qué sale a cuenta.</span></h2>
+    <p class="section-lead">El absentismo no es un coste fijo: es la mayor partida recuperable del hotel. Esto es lo que cuesta hoy y lo que Fisify devuelve.</p>
+
+    <div class="roi2-stats">
+      <div class="roi2-stat"><div class="v">12%</div><div class="l">Absentismo por IT del hotel</div></div>
+      <div class="roi2-stat"><div class="v">nº 1</div><div class="l">Musculoesqueléticas, causa más frecuente (Mutua Universal)</div></div>
+      <div class="roi2-stat"><div class="v">112</div><div class="l">Días de baja media en MSK · cada caso pesa</div></div>
+      <div class="roi2-stat"><div class="v">×2,2</div><div class="l">vs la media nacional de IT (5,5%)</div></div>
+    </div>
+
+    <h3 class="roi2-cost-title">El coste real no es solo el salario de la baja</h3>
+    <p class="roi2-cost-lead">Lo que se ve es el salario durante la baja. El coste real incluye sustituciones en temporada alta, horas extra del equipo, cotización, pérdida de servicio y rotación. El criterio habitual lo multiplica por dos.</p>
+    <div class="roi2-flow">
+      <div class="roi2-flow-card"><div class="k">Lo que se ve</div><div class="big">≈ 220.000 €</div><p>Coste salarial directo estimado del absentismo al año.</p></div>
+      <div class="roi2-arrow">→</div>
+      <div class="roi2-flow-card"><div class="k">Capas ocultas</div><p style="margin-top:0.5rem">Sustituciones · horas extra · cotización · sobrecarga · rotación.</p></div>
+      <div class="roi2-arrow">→</div>
+      <div class="roi2-flow-card real"><div class="k">El coste real</div><div class="big">≈ 440.000 €</div><p>Coste total estimado del absentismo al año (×2).</p></div>
+    </div>
+
+    <h3 class="roi2-cost-title">Dónde actúa Fisify: el coste recuperable</h3>
+    <p class="roi2-cost-lead">Fisify ataca directamente las musculoesqueléticas —la causa nº 1— más una parte de las traumáticas y del malestar inespecífico. El coste recuperable se estima en <strong>≈ 220.000 €/año</strong>. Sobre esa base, tres escenarios de reducción:</p>
+    <div class="roi2-scen">
+      <div class="roi2-scen-card"><div class="tag">Conservador</div><div class="pct">−20%</div><div class="ah">ahorro ≈ 44.000 €/año</div><div class="roi">ROI ≈ 1,2×</div></div>
+      <div class="roi2-scen-card base"><div class="tag">Escenario base</div><div class="pct">−30%</div><div class="ah">ahorro ≈ 66.000 €/año</div><div class="roi">ROI ≈ 1,8×</div></div>
+      <div class="roi2-scen-card"><div class="tag">Optimista</div><div class="pct">−40%</div><div class="ah">ahorro ≈ 88.000 €/año</div><div class="roi">ROI ≈ 2,5×</div></div>
+    </div>
+    <p class="roi2-note">ROI calculado sobre la modalidad quincenal (≈ 36.000 €/año con el 10% de descuento aplicado). Con la modalidad mensual el ratio sube; con la semanal el impacto absoluto en bajas es mayor.</p>
+
+    <div class="roi2-punch">
+      <h5>Basta con evitar 1-2 bajas musculoesqueléticas largas al año</h5>
+      <p>Cada baja musculoesquelética dura de media 112 días. Con ese coste por caso, prevenir solo 1-2 al año paga el programa entero. Y la causa nº 1 del hotel es, justamente, la musculoesquelética: Fisify no es un gasto de bienestar, es una inversión que se recupera evitando las bajas más caras y más frecuentes.</p>
+    </div>
+
+    <div class="roi-table" style="margin-top:1.6rem">
+      <div class="roi-row"><div class="roi-row-left"><div class="when">Año 1</div><h4>Consolidación</h4><p>−2 a −4 puntos de absentismo · cohorte tratada</p></div><div class="roi-mult">1,8×</div></div>
+      <div class="roi-row"><div class="roi-row-left"><div class="when">Años 2-3</div><h4>Impacto sostenido</h4><p>Cultura preventiva integrada · cohorte ampliada</p></div><div class="roi-mult">2,5×</div></div>
+    </div>
+
+    <div class="roi-assumptions">
+      <h5>Nota metodológica</h5>
+      <p>Cifras económicas estimadas a partir de la plantilla (~360), el absentismo por IT (12%) y el salario medio del sector hostelero, con un multiplicador ×2 para el coste real (criterio habitual en entornos con turnos y estacionalidad). Las cifras de absentismo son reales (informe Mutua Universal); se ajustarán con el informe de coste completo de la mutua en cuanto esté disponible — la estructura del cálculo ya está lista para sustituir los números.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5.5 CASO DE ÉXITO -->
+<section class="caso-bg" id="prezero-case">
+  <div class="container">
+    <p class="section-num">Caso de éxito</p>
+    <h2 class="section-title">Lo que ya hemos demostrado <span class="y">en PreZero.</span></h2>
+    <p class="section-lead">No es una proyección: es el resultado real de aplicar el mismo método en una operativa con 12 centros y 683 usuarios.</p>
+
+    <div class="caso-stats">
+      <div class="caso-stat"><div class="v clay">−47%</div><div class="l">Accidentes osteo-musculares</div></div>
+      <div class="caso-stat"><div class="v">95%</div><div class="l">Mejora clínica del dolor</div></div>
+      <div class="caso-stat"><div class="v">96%</div><div class="l">Continuidad del programa</div></div>
+      <div class="caso-stat"><div class="v">56%</div><div class="l">Adopción de la plantilla</div></div>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: var(--ink-soft); max-width: 740px; margin-left: auto; margin-right: auto; line-height: 1.6; font-weight:300;">
+      <strong style="color: var(--cocoa); font-weight:500;">12 centros · 683 usuarios · 9.100+ sesiones · 12-18 meses de adopción acumulada.</strong> Si funcionó en una operativa logística distribuida, funciona en un resort de ~360 trabajadores como Paradisus Gran Canaria.
+    </p>
+  </div>
+</section>
+
+<!-- 6. INVERSIÓN -->
+<section class="inversion-bg">
+  <div class="container">
+    <p class="section-num">Inversión</p>
+    <h2 class="section-title">Tres modalidades <span class="y">de programa.</span></h2>
+    <p class="section-lead">Misma metodología. La diferencia es la intensidad presencial del fisioterapeuta. Sin permanencia · facturación mensual.</p>
+
+    <div class="dim-note">
+      <h5>Dimensionado para ~360 empleados</h5>
+      <p>Cada visita es una jornada de 8 h con capacidad para ~14 pacientes/día. Para una plantilla de ~360, con <strong>~214 trabajadores en los colectivos diana</strong> (cocina, pisos y restauración): <strong>Premium (1 v/sem)</strong> da la mayor cobertura presencial recurrente; <strong>Optimizado (1 v/15 días)</strong> mantiene el seguimiento de los casos diana; <strong>Básico (1 v/mes)</strong> cubre el arranque, el diagnóstico y los casos prioritarios. Toda la plantilla tiene acceso a la plataforma digital en las tres modalidades. Precio ajustado a vuestra plantilla (~360) sobre la tarifa de referencia de hoteles Meliá.</p>
+    </div>
+
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th class="col-feat" style="text-align: left;"></th>
+            <th><span class="tier-h">Premium</span><span class="tier-cad">1 v / semana</span><div class="tier-price-big">4.483,35 €<small>/ mes</small></div></th>
+            <th><span class="tier-h">Optimizado</span><span class="tier-cad">1 v / 15 días</span><div class="tier-price-big">3.336 €<small>/ mes</small></div></th>
+            <th><span class="tier-h">Básico</span><span class="tier-cad">1 v / mes</span><div class="tier-price-big">2.838 €<small>/ mes</small></div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="price-section-header" colspan="4">Cobertura presencial</td></tr>
+          <tr><td class="col-feat">Visitas presenciales / año</td><td><span class="val-small">48</span></td><td><span class="val-small">24</span></td><td><span class="val-small">12</span></td></tr>
+          <tr><td class="col-feat">Capacidad asistencial / año<span class="row-sub">~14 pacientes por visita</span></td><td><span class="val-small">~670</span></td><td><span class="val-small">~340</span></td><td><span class="val-small">~170</span></td></tr>
+          <tr><td class="col-feat">Jornada del fisio (8 h · ~14 pacientes/día)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+          <tr><td class="col-feat">Fisioterapeuta asignado estable</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+
+          <tr><td class="price-section-header" colspan="4">Servicio digital</td></tr>
+          <tr><td class="col-feat">Plataforma Fisify (toda la plantilla · ~360)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+          <tr><td class="col-feat">Videollamadas con fisio</td><td><span class="val-small">20/mes</span></td><td><span class="val-small">12/mes</span></td><td><span class="val-small">8/mes</span></td></tr>
+          <tr><td class="col-feat">Chat con fisio<span class="row-sub">Respuesta &lt; 24 h</span></td><td><span class="val-small">∞</span></td><td><span class="val-small">∞</span></td><td><span class="val-small">∞</span></td></tr>
+          <tr><td class="col-feat">Seguimiento telefónico<span class="row-sub">~10 min/sem por paciente</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+          <tr><td class="col-feat">Gamificación · ranking + sorteo de premios</td><td><span class="val-small">Mensual</span></td><td><span class="val-small">Mensual</span></td><td><span class="val-small">Trimestral</span></td></tr>
+
+          <tr><td class="price-section-header" colspan="4">Foco y reporte</td></tr>
+          <tr><td class="col-feat">Foco en colectivos diana (cocina · pisos · restauración)</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+          <tr><td class="col-feat">Plan de comunicación + Panel reporting</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="val-small">Trimestral</span></td></tr>
+          <tr><td class="col-feat">Cuadro de mando<span class="row-sub">Adherencia · dolor · días recuperados · IT</span></td><td><span class="val-small">Mensual</span></td><td><span class="val-small">Mensual</span></td><td><span class="val-small">Trimestral</span></td></tr>
+          <tr><td class="col-feat">Revisión conjunta PRL · Fisify</td><td><span class="val-small">Semestral</span></td><td><span class="val-small">Semestral</span></td><td><span class="val-small">Semestral</span></td></tr>
+
+          <tr><td class="price-section-header" colspan="4">Condiciones</td></tr>
+          <tr><td class="col-feat">Sin permanencia · facturación mensual</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 7. COMPROMISO -->
+<section class="compromiso-bg">
+  <div class="container">
+    <p class="section-num" style="text-align: center; display: block;">Nuestro compromiso</p>
+    <p class="compromiso-statement">Asumimos toda la responsabilidad para que este proyecto sea un <em>éxito.</em></p>
+    <p class="compromiso-text">No venimos a cumplir un contrato: venimos a dar el 120% para que cada empleado note la diferencia.</p>
+    <p class="compromiso-text" style="margin-top: 1.5rem;">Queremos que <strong>Paradisus Gran Canaria</strong> sea un caso de éxito de referencia en bienestar corporativo. Un proyecto del que ambos estemos orgullosos y que marque el estándar en la industria hotelera.</p>
+
+    <div class="compromiso-card">
+      <div class="signature">Equipo Fisify</div>
+      <div class="names">Laura López · Iñaki Marquinez</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Fisify</strong> · Bienestar corporativo basado en evidencia · Plan de Acción · 1 año<br>
+    <span style="opacity: 0.6; font-size: 0.78rem; margin-top: 0.5rem; display: inline-block;">
+      En colaboración con Paradisus Gran Canaria · Cifras de absentismo Mutua Universal (abr 2025 – abr 2026) · Documento confidencial · 2026
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
