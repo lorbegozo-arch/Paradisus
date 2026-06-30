@@ -98,6 +98,7 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
 .diag-kpi.space-card .pct { color: var(--cream); font-size: 1.6rem; line-height: 1.12; max-width: 16ch; font-weight: 500; }
 .diag-kpi.space-card p { color: rgba(247,241,230,0.72); }
 .diag-kpi.space-card .pending { display: inline-block; margin-top: 0.9rem; font-family: var(--font-sans); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cocoa); background: var(--taupe); padding: 0.3rem 0.7rem; border-radius: 100px; font-weight: 500; }
+.diag-kpi.space-card .space-photo { width: 100%; aspect-ratio: 16/9; border-radius: 10px; margin: 0.7rem 0 0.7rem; border: 1px solid rgba(199,158,124,0.3); background: url('sala.jpg') center/cover no-repeat, url('https://i.ibb.co/Q7sY3fTQ/PHOTO-2026-06-25-18-20-39.jpg') center/cover no-repeat, #2a2118; }
 
 .roi-callout { background: linear-gradient(120deg, var(--cocoa) 0%, var(--cocoa-deep) 100%); color: var(--cream); border-radius: var(--radius); padding: 1.8rem 2rem; margin-top: 2.2rem; display: grid; gap: 1.2rem; grid-template-columns: 1fr; align-items: center; position: relative; overflow: hidden; box-shadow: 0 24px 50px -26px rgba(74,59,45,0.6); }
 @media (min-width: 760px) { .roi-callout { grid-template-columns: 2fr 1fr; } }
@@ -240,7 +241,7 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
 .phone::before { content: ''; position: absolute; top: 16px; left: 50%; transform: translateX(-50%); width: 66px; height: 6px; border-radius: 6px; background: rgba(247,241,230,0.28); z-index: 2; }
 .phone-screen { border-radius: 26px; aspect-ratio: 9 / 19.5; background: url('app-fisify.jpg') center / cover no-repeat, url('https://i.ibb.co/7tH7Z7Vj/fisifyweb.webp') center / cover no-repeat, linear-gradient(165deg, var(--vanilla) 0%, var(--sand) 55%, var(--sand-deep) 100%); }
 .cobrand { margin-bottom: 1.9rem; }
-.cobrand-logo { width: 170px; height: 96px; background: url('logo-melia.png') left center / contain no-repeat, url('https://i.ibb.co/TxzQCbSH/Melia-paradisus-GC.jpg') left center / contain no-repeat; mix-blend-mode: multiply; }
+.cobrand-logo { width: 200px; height: 104px; background: url('logo-paradisus.png') left center / contain no-repeat, url('https://i.ibb.co/7NBQZ6jX/Paradisus-Melia-Logo.png') left center / contain no-repeat; }
 /* CO-BRAND (logos reales, fondo blanco fundido con multiply) */
 .cobrand { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
 .cobrand img { mix-blend-mode: multiply; display: block; height: auto; }
@@ -379,21 +380,6 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
     <h1 class="hero-title">Plan de <span class="y">Acción.</span></h1>
     <div class="hero-subtitle">Programa de Salud Física · 12 meses</div>
     <a href="#diagnostico" class="hero-cta">Descubre el plan ↓</a>
-
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <h4>Destinatario</h4>
-        <p>Dirección y PRL<br><span style="color:var(--ink-soft);font-size:0.9rem">Paradisus Gran Canaria</span></p>
-      </div>
-      <div class="hero-meta-item">
-        <h4>Fuentes</h4>
-        <p>Informe de absentismo Mutua Universal<br>Abr 2025 – Abr 2026<br>Plantilla media · junio 2026</p>
-      </div>
-      <div class="hero-meta-item">
-        <h4>Autores</h4>
-        <p>Laura López</p>
-      </div>
-    </div>
   </div>
 </header>
 
@@ -422,9 +408,9 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
       </div>
       <div class="diag-kpi space-card">
         <div class="label">Espacios y operativa</div>
-        <div class="pct">Sala de fisio y formaciones en el hotel</div>
-        <p>Habilitamos una consulta fija dentro de las instalaciones para el fisioterapeuta de referencia. Operativa desde el día 1.</p>
-        <span class="pending">Imagen del espacio · pendiente de incorporar</span>
+        <div class="space-photo" role="img" aria-label="Sala de fisio y formaciones — taller con la plantilla"></div>
+        <div class="pct" style="font-size:1.2rem;line-height:1.15">Sala de fisio y formaciones</div>
+        <p>Espacio equipado para la consulta de fisioterapia y para las formaciones a la plantilla. Operativa desde el día 1.</p>
       </div>
     </div>
 
@@ -490,7 +476,7 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
           <video class="bioc-video" src="IMG_4815.mp4" poster="IMG_4815.jpg" autoplay muted loop playsinline preload="metadata"></video>
           <div class="bioc-body">
             <div class="bioc-head"><span class="bioc-id">06 · Cocina</span><span class="bioc-risk critical">Crítico</span></div>
-            <h4>Fregado de bandejas gastronorm</h4>
+            <h4>Fregado de bandejas</h4>
             <div class="bioc-area">Steward · fregaderos</div>
             <p>Flexión de tronco mantenida sobre el fregadero con fregado vigoroso. <strong>Carga estática lumbar prolongada</strong> más esfuerzo repetido de muñeca y hombro.</p>
           </div>
@@ -831,11 +817,11 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
     <h3 class="roi2-cost-title">Dónde actúa Fisify: el coste recuperable</h3>
     <p class="roi2-cost-lead">Fisify ataca directamente las musculoesqueléticas —la causa nº 1— más una parte de las traumáticas y del malestar inespecífico. El coste recuperable se estima en <strong>≈ 220.000 €/año</strong>. Sobre esa base, tres escenarios de reducción:</p>
     <div class="roi2-scen">
-      <div class="roi2-scen-card"><div class="tag">Conservador</div><div class="pct">−20%</div><div class="ah">ahorro ≈ 44.000 €/año</div><div class="roi">ROI ≈ 1,6×</div></div>
-      <div class="roi2-scen-card base"><div class="tag">Escenario base</div><div class="pct">−30%</div><div class="ah">ahorro ≈ 66.000 €/año</div><div class="roi">ROI ≈ 2,4×</div></div>
-      <div class="roi2-scen-card"><div class="tag">Optimista</div><div class="pct">−40%</div><div class="ah">ahorro ≈ 88.000 €/año</div><div class="roi">ROI ≈ 3,3×</div></div>
+      <div class="roi2-scen-card"><div class="tag">Conservador</div><div class="pct">−20%</div><div class="ah">ahorro ≈ 44.000 €/año</div><div class="roi">ROI ≈ 1,5×</div></div>
+      <div class="roi2-scen-card base"><div class="tag">Escenario base</div><div class="pct">−30%</div><div class="ah">ahorro ≈ 66.000 €/año</div><div class="roi">ROI ≈ 2,2×</div></div>
+      <div class="roi2-scen-card"><div class="tag">Optimista</div><div class="pct">−40%</div><div class="ah">ahorro ≈ 88.000 €/año</div><div class="roi">ROI ≈ 2,9×</div></div>
     </div>
-    <p class="roi2-note">ROI calculado sobre la modalidad quincenal (≈ 27.000 €/año con el 10% de descuento aplicado). Con la modalidad mensual el ratio sube; con la semanal el impacto absoluto en bajas es mayor.</p>
+    <p class="roi2-note">ROI calculado sobre la modalidad quincenal (2.502 €/mes ≈ 30.060 €/año). Con la modalidad mensual el ratio sube; con la semanal el impacto absoluto en bajas es mayor.</p>
 
     <div class="roi2-punch">
       <h5>Basta con evitar 1-2 bajas musculoesqueléticas largas al año</h5>
@@ -843,8 +829,8 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; }
     </div>
 
     <div class="roi-table" style="margin-top:1.6rem">
-      <div class="roi-row"><div class="roi-row-left"><div class="when">Año 1</div><h4>Consolidación</h4><p>−2 a −4 puntos de absentismo · cohorte tratada</p></div><div class="roi-mult">2,4×</div></div>
-      <div class="roi-row"><div class="roi-row-left"><div class="when">Años 2-3</div><h4>Impacto sostenido</h4><p>Cultura preventiva integrada · cohorte ampliada</p></div><div class="roi-mult">3,3×</div></div>
+      <div class="roi-row"><div class="roi-row-left"><div class="when">Año 1</div><h4>Consolidación</h4><p>−2 a −4 puntos de absentismo · cohorte tratada</p></div><div class="roi-mult">2,2×</div></div>
+      <div class="roi-row"><div class="roi-row-left"><div class="when">Años 2-3</div><h4>Impacto sostenido</h4><p>Cultura preventiva integrada · cohorte ampliada</p></div><div class="roi-mult">2,9×</div></div>
     </div>
 
     <div class="roi-assumptions">
